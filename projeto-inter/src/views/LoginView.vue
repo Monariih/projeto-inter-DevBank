@@ -1,9 +1,6 @@
 <template>
     <AppBar />
     <AppSideOptions/>
-  <v-main>
-      Login
-  </v-main>
 </template>
 
 <script>

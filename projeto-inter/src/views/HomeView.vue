@@ -11,10 +11,8 @@
               </v-col>
           </v-row>
           <div
-            class="sub-div"
+                  id="icon"
           >
-
-
               <Icon icon="arcticons:developerwidget" color="white" width="70" height="70" />
           </div>
       </v-parallax>
@@ -28,7 +26,7 @@
 <script>
 import AppBar from "@/components/AppBar.vue";
 import Footer from "@/components/footer.vue";
-import { Icon } from '@iconify/vue';
+import {Icon} from '@iconify/vue';
 
 export default{
     components: {Footer, AppBar, Icon},
@@ -44,7 +42,10 @@ export default{
 h2{
     color: #FFFFFF;
 }
-#icon{
-
+#icon {
+    position: absolute;
+    width: 100%;
+    text-align: end;
+    margin-top: 35%;
 }
 </style>

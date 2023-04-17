@@ -3,12 +3,16 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
+import VueTheMask from 'vue-the-mask';
 import { loadFonts } from './plugins/webfontloader'
+
 
 loadFonts()
 
 createApp(App)
+  .use(VueTheMask)
+  .use(vuetify)
   .use(router)
   .use(store)
-  .use(vuetify)
   .mount('#app')
+

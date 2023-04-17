@@ -18,6 +18,11 @@
             >
                 Login
             </v-btn>
+            <v-btn
+              link to="/create"
+            >
+                Criar Conta
+            </v-btn>
         </v-btn-toggle>
     </v-app-bar>
 </template>

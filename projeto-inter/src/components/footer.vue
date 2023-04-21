@@ -45,11 +45,13 @@
           <v-row>
               <v-col>
                   Lucas Monari - 30146470<v-spacer></v-spacer>
+                  Douglas Zucolotto - 29708672<v-spacer></v-spacer>
                   Fernando Macena - 29660351<v-spacer></v-spacer>
                   Gabriel Vianna - 29604745<v-spacer></v-spacer>
                   Douglas Cantuario - 29527996<v-spacer></v-spacer>
                   Guilherme Rodrigues - 29684994<v-spacer></v-spacer>
                   José Azevedo Júnior - 29685729<v-spacer></v-spacer>
+                  Gabriel dos Santos - 30165709<v-spacer></v-spacer>
               </v-col>
           </v-row>
       </v-col>

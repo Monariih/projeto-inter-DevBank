@@ -14,11 +14,13 @@
                     <hr>
                 </v-card-subtitle>
             </v-card-title>
-            <v-form>
+            <v-form @submit.prevent="handleSubmit">
                 <v-container>
                     <v-card-item>
                         <v-text-field
-                                v-model="email_cpf"
+                                v-model="email"
+                                type="email"
+                                :rules="[rules.required]"
                                 label="E-MAIL / CPF"
                                 variant="underlined"
                         >
@@ -46,28 +48,59 @@
                 </v-container>
             </v-form>
         </v-card>
+        <v-card
+                id="show_error"
+                v-if="error"
+        >
+            <div>
+                {{ error }}
+            </div>
+        </v-card>
     </v-main>
 </template>
 
 <script>
 import AppBar from "@/components/AppBar.vue";
+import { ref } from "vue";
+import { useStore } from "vuex";
+import { useRouter } from "vue-router";
 
 export default{
+    name: 'LoginView.vue',
     components: { AppBar },
+
     data: () => {
         return ({
             togglePage: 1,
 
             // Declaração das variáveis de login
-            email_cpf: null,
-            password: null,
+
             show1: false,
             rules: {
                 required: value => !!value || 'Required.',
                 min: v => v.length >= 8 || 'Min 8 characters',
             },
         })
+    },
+    setup() {
+        const email = ref('')
+        const password = ref('')
+
+        const store = useStore()
+        const router = useRouter()
+        const error = ref('')
+
+        const handleSubmit = async () => {
+            try{
+                await store.dispatch('login', {email: email.value, password: password.value})
+                router.push('/homeUser')
+            }catch (err) {
+                error.value = err.message
+            }
+        }
+        return { handleSubmit, email, password, error}
     }
+
 }
 </script>
 
@@ -81,5 +114,12 @@ export default{
     background-color: #560d00;
     width: 30%;
     color: #FFFFFF;;
+}
+#show_error{
+    margin: auto;
+    padding: 1rem;
+    width: fit-content;
+    background-color: #383838;
+    color: #FFFFFF;
 }
 </style>

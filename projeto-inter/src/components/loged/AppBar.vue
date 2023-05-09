@@ -16,9 +16,9 @@
                 Home
             </v-btn>
             <v-btn
-                    link to="/login"
+                    link to="/extract"
             >
-                Login
+                Transações
             </v-btn>
             <v-btn
                     link to="/"
@@ -36,14 +36,28 @@
             link to="/homeUser"
         >
             <v-list-item-title>
-                HOME
+                Home
             </v-list-item-title>
         </v-list-item>
         <v-list-item
-            link to="/"
+            link to="/deposit"
         >
             <v-list-item-title>
-                HOMESAI
+                Depósitos
+            </v-list-item-title>
+        </v-list-item>
+        ><v-list-item
+                link to="/transfer"
+        >
+            <v-list-item-title>
+                Transferências
+            </v-list-item-title>
+        </v-list-item>
+        <v-list-item
+                link to="/withdraw"
+        >
+            <v-list-item-title>
+                Sacar
             </v-list-item-title>
         </v-list-item>
         <v-divider class="my-2"></v-divider>

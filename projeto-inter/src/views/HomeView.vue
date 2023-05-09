@@ -28,8 +28,6 @@
 import AppBar from "@/components/AppBar.vue";
 import Footer from "@/components/footer.vue";
 import {Icon} from '@iconify/vue';
-import { ref } from "vue";
-import { useStore } from "vuex";
 
 export default{
     components: {Footer, AppBar, Icon},
@@ -39,10 +37,6 @@ export default{
     })
   },
     setup(){
-        const store = useStore()
-      return{
-
-      }
     }
 }
 </script>

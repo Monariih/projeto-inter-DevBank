@@ -91,11 +91,13 @@
                                 <v-container>
                                     <v-text-field
                                             label="CPF"
+                                            v-model="cpf"
                                             variant="underlined"
                                     ></v-text-field>
 
                                     <v-text-field
                                             label="Valor"
+                                            v-model="valor"
                                             variant="underlined"
                                     ></v-text-field>
                                     <v-btn
@@ -143,6 +145,8 @@
 </template>
 
 <script>
+import devsBankApi from "@/libraries";
+
 export default {
     name: "Pix.vue",
     data(){
@@ -153,12 +157,15 @@ export default {
                 {title: 'Celular', value: 1},
                 {title: 'CPF', value: 2},
                 {title: 'Chave Aleatória', value: 3}
-            ]
+            ],
+            valor: null,
+            cpf: null
         }
     },
     methods:{
       sendPix(){
-          console.log("PIX")
+          const pix = devsBankApi.TransferFunctions.pix(this.valor, this.cpf)
+          console.log(pix)
       }
     }
 }

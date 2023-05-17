@@ -23,7 +23,6 @@ const store =  createStore({
         const resp = await createUserWithEmailAndPassword(auth, email, password)
         if (resp){
           context.commit('setUser', resp.user)
-
         }else {
           throw new Error('Não')
         }
@@ -35,6 +34,7 @@ const store =  createStore({
         const resp = await signInWithEmailAndPassword(auth, email, password)
         if (resp){
           context.commit('setUser', resp.user)
+          window.resp = resp
         }else {
           throw new Error('Não login')
         }

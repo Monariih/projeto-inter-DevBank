@@ -16,6 +16,18 @@ class TransferFunctions{
         }
         return resp
     }
+    /*
+    static async lerUser()
+    static async pix(valor, cpf){
+        window.db
+        var resp;
+        try{
+            const docRef = await up
+        }catch (error){
+            console.error(error)
+        }
+    }
+     */
 }
 
 export default TransferFunctions

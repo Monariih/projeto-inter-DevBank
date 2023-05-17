@@ -89,6 +89,7 @@
                     v-if="selected.value === 1"
             >
                 Area TED
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cumque eos facere, fugit illo laboriosam laborum molestiae nisi nulla odit, provident quae sunt! Ad, aliquam deserunt eum impedit quas quos!
             </v-col>
             <v-col
                     v-if="selected.value === 2"
@@ -117,6 +118,7 @@ import Pix from "@/components/loged/Pix.vue";
 
 export default {
     name: "homeUserView.vue",
+    props: ['state'],
     components: {
         AppBar,
         Pix,
@@ -132,6 +134,9 @@ export default {
                 {title: 'DEPÓSITO', value: 4}
             ]
         }
+    },
+    created() {
+
     }
 }
 </script>

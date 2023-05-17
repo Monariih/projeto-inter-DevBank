@@ -45,7 +45,7 @@
         </v-col>
         <v-col>
             <v-parallax
-                src="../src/assets/desenvolvedoraHome.jpg"
+                src="https://cdn.e-konomista.pt/uploads/2019/10/programador-2-GI.jpg"
             >
 
             </v-parallax>

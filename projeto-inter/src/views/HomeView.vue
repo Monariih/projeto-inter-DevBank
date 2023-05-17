@@ -2,7 +2,7 @@
   <AppBar/>
 
       <v-parallax
-          src="../src/assets/desenvolvedor.jpg"
+          src="https://cdn.e-konomista.pt/uploads/2019/07/programador-GI-850x514.jpg"
       >
           <v-row
             class="pa-6 ma-6"
